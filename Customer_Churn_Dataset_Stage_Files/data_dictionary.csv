@@ -1,0 +1,22 @@
+Column,Description,Business Area,Recommended Type
+customerID,Unique customer identifier,Key,Text
+gender,Customer gender category,Demographic,Categorical
+SeniorCitizen,Whether customer is a senior citizen (0/1),Demographic,Binary integer
+Partner,Whether customer has a partner,Demographic,Categorical
+Dependents,Whether customer has dependents,Demographic,Categorical
+tenure,Number of months the customer has stayed,Customer lifecycle,Integer (months)
+PhoneService,Whether phone service is subscribed,Service,Categorical
+MultipleLines,Whether multiple phone lines are subscribed; includes service-not-applicable category,Service,Categorical
+InternetService,Internet service type,Service,Categorical
+OnlineSecurity,Whether online security add-on is subscribed; includes service-not-applicable category,Service,Categorical
+OnlineBackup,Whether online backup add-on is subscribed; includes service-not-applicable category,Service,Categorical
+DeviceProtection,Whether device protection add-on is subscribed; includes service-not-applicable category,Service,Categorical
+TechSupport,Whether tech support add-on is subscribed; includes service-not-applicable category,Service,Categorical
+StreamingTV,Whether streaming TV is subscribed; includes service-not-applicable category,Service,Categorical
+StreamingMovies,Whether streaming movies is subscribed; includes service-not-applicable category,Service,Categorical
+Contract,Customer contract term,Contract,Categorical
+PaperlessBilling,Whether paperless billing is enabled,Billing,Categorical
+PaymentMethod,Customer payment method,Billing,Categorical
+MonthlyCharges,Current monthly amount charged,Billing,Decimal currency amount
+TotalCharges,Total amount charged over customer tenure,Billing,Decimal currency amount
+Churn,Whether the customer left the company (Yes/No),Target,Categorical binary
