@@ -1,0 +1,12 @@
+Check,Result,Interpretation
+Source records,7043,Original IBM Telco customer records
+Source columns,21,21 fields
+Exact duplicate rows,0,No exact duplicate rows found
+Duplicate customer IDs,0,Customer key uniqueness check
+Blank TotalCharges strings in raw file,11,Whitespace-only values not detected by default NA parsing
+Missing TotalCharges after numeric conversion,11,Retained as missing; not imputed
+Customers with tenure = 0,11,Cross-check against missing TotalCharges
+Tenure outside expected 0–72 range,0,Range validation
+Negative MonthlyCharges,0,Non-negative amount validation
+Churn = Yes,1869,Target class count
+Churn = No,5174,Target class count
