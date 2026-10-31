@@ -1,0 +1,16 @@
+{
+  "name": "Customer Churn - Clean Navy Teal",
+  "dataColors": [
+    "#3987D7",
+    "#E85B73",
+    "#2FA889",
+    "#8067C7",
+    "#E5A33D",
+    "#6B7C93",
+    "#8FB7E8",
+    "#F2A6B3"
+  ],
+  "background": "#F3F6FB",
+  "foreground": "#172B4D",
+  "tableAccent": "#3987D7"
+}

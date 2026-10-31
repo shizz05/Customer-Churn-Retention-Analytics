@@ -1,0 +1,44 @@
+-- Customer Churn & Retention Analytics | Power BI DAX Measures
+-- Assumed imported table name: 'public telco_customers'
+-- If your Fields pane shows another name, replace it in every formula.
+
+Total Customers =
+DISTINCTCOUNT('public telco_customers'[customerID])
+
+Churned Customers =
+CALCULATE([Total Customers], 'public telco_customers'[Churn] = "Yes")
+
+Retained Customers =
+CALCULATE([Total Customers], 'public telco_customers'[Churn] = "No")
+
+Churn Rate =
+DIVIDE([Churned Customers], [Total Customers], 0)
+
+Retention Rate =
+DIVIDE([Retained Customers], [Total Customers], 0)
+
+Average Monthly Charges =
+AVERAGE('public telco_customers'[MonthlyCharges])
+
+Average Monthly Charges - Churned =
+CALCULATE([Average Monthly Charges], 'public telco_customers'[Churn] = "Yes")
+
+Average Monthly Charges - Retained =
+CALCULATE([Average Monthly Charges], 'public telco_customers'[Churn] = "No")
+
+Total Monthly Charges =
+SUM('public telco_customers'[MonthlyCharges])
+
+Churned Customers' Monthly Charges =
+CALCULATE([Total Monthly Charges], 'public telco_customers'[Churn] = "Yes")
+
+Churned Monthly Charges Share =
+DIVIDE([Churned Customers' Monthly Charges], [Total Monthly Charges], 0)
+
+Average Tenure (Months) =
+AVERAGE('public telco_customers'[tenure])
+
+-- Formatting:
+-- Churn Rate, Retention Rate, Churned Monthly Charges Share: Percentage, 2 decimals.
+-- Customer counts: Whole number, thousands separator.
+-- Monthly charges: Currency (USD), if using the dataset's currency convention.
